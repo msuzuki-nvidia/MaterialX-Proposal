@@ -19,8 +19,6 @@ Unlike standard image tiling, hextiling involves image blending. As described in
 
 ### `<hextiledimage>`
 
-<center>
-
 | Parameter            |   Type   |  Range   |     Default     | Description                                   |
 | -------------------- | :------: | :------: | :-------------: | --------------------------------------------- |
 | **file**             | filename |          |                 | Image file path                               |
@@ -36,11 +34,7 @@ Unlike standard image tiling, hextiling involves image blending. As described in
 | **falloff**          |  float   | \[0, 1\] |       0.5       | Falloff width for blending tiles              |
 | **falloff_contrast** |  float   | \[0, 1\] |       0.5       | Falloff contrast for blending tiles           |
 
-</center>
-
 ### `<hextilednormalmap>`
-
-<center>
 
 | Parameter          |   Type   |  Range   |   Default    | Description                                   |
 | ------------------ | :------: | :------: | :----------: | --------------------------------------------- |
@@ -48,7 +42,7 @@ Unlike standard image tiling, hextiling involves image blending. As described in
 | **default**        | vector3  |          |   `Nworld`   | Default normal                                |
 | **texcoord**       | vector2  |          |    `UV0`     | Texture coordinate                            |
 | **tangent**        | vector3  |          |   `Tworld`   | Tangent vector                                |
-| **bitangent**      | vector3  |          |   `Bworld`   | Bitangent Vector                              |
+| **bitangent**      | vector3  |          |   `Bworld`   | Bitangent vector                              |
 | **tiling**         | vector2  |          |  (1.0, 1.0)  | Tile repeat                                   |
 | **rotation**       |  float   | \[0, 1\] |     1.0      | Rotation randomness                           |
 | **rotation_range** | vector2  |          | (0.0, 360.0) | Range of values used for randomizing rotation |
@@ -59,24 +53,27 @@ Unlike standard image tiling, hextiling involves image blending. As described in
 | **falloff**        |  float   | \[0, 1\] |     0.5      | Falloff width for blending tiles              |
 | **strength**       |  float   | \[0, 1\] |     1.0      | Normal map strength                           |
 
-</center>
-
 
 ## Examples
 
+### `<hextiledimage>`
+
 <center>
 
-|                                  |       `<hextiledimage>`        |                                |
-| :------------------------------: | :----------------------------: | :----------------------------: |
 | ![](./images/image_rotation.gif) | ![](./images/image_scale.gif)  | ![](./images/image_offset.gif) |
+| :------------------------------: | :----------------------------: | :----------------------------: |
 |      **Rotation (0 - 360)**      |     **Scale (0.5 - 2.0)**      |       **Offset (0 - 1)**       |
 |   ![](./images/image_rso.gif)    | ![](./images/image_tiling.gif) |                                |
 |  **Rotation + Scale + Offset**   |      **Tiling (1 - 100)**      |                                |
 
+</center>
 
-|                                   |      `<hextilednormalmap>`      |                                 |
-| :-------------------------------: | :-----------------------------: | :-----------------------------: |
+### `<hextilednormalmap>`
+
+<center>
+
 | ![](./images/normal_rotation.gif) | ![](./images/normal_scale.gif)  | ![](./images/normal_offset.gif) |
+| :-------------------------------: | :-----------------------------: | :-----------------------------: |
 |      **Rotation (0 - 360)**       |      **Scale (0.5 - 2.0)**      |       **Offset (0 - 1)**        |
 |   ![](./images/normal_rso.gif)    | ![](./images/normal_tiling.gif) |                                 |
 |   **Rotation + Scale + Offset**   |      **Tiling (1 - 100)**       |                                 |
